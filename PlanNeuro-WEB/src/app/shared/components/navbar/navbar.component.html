@@ -1,0 +1,25 @@
+<nav>
+  <div class="nav-wrapper">
+    <a routerLink=""  class="brand-logo">PlanNeuro</a>
+    <a routerLink="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li *ngIf="isLogged">
+        <a routerLink="/private" class="nav-link"><b>Personal board</b></a>
+      </li>
+      <li *ngIf="isLogged">
+        <a routerLink="/public" class="nav-link"><b>Shared boards</b></a>
+      </li>
+      <li *ngIf="!isLogged">
+        <a routerLink="/account/registration" class="nav-link"><b>Registration</b></a>
+      </li>
+      <li *ngIf="isLogged">
+        <a (click)="logOut()" class="nav-link"><b>Logout</b></a>
+      </li>
+      <li *ngIf="!isLogged">
+        <a routerLink="/account/login" class="nav-link"><b>Login</b></a>
+      </li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+    </ul>
+  </div>
+</nav>

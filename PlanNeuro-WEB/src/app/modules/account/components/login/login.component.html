@@ -1,0 +1,51 @@
+<div class="row">
+  <form class="col s12" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="email" formControlName="Email" required>
+        <label for="email">Email</label>
+      </div>
+      <div *ngIf=" loginForm.controls.Email.errors && submitted" class="red-text">
+        <div *ngIf="loginForm.controls.Email.errors.required">
+          *Login is a required
+        </div>
+        <div *ngIf="loginForm.controls.Email.errors.pattern">
+          *Invalid email
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="password" type="password" formControlName="Password" required>
+        <label for="password">Password</label>
+      </div>
+      <div *ngIf="loginForm.controls.Password.errors && submitted" class="red-text">
+        <div *ngIf="loginForm.controls.Password.errors.required">
+          *Password is a required
+        </div>
+        <div *ngIf="loginForm.controls.Password.errors.pattern">
+          *Password must have :
+          <ul>
+            <li>
+              -uppercase and lowercase Latin letters
+            </li>
+            <li>
+              -digit
+            </li>
+            <li>
+              -character
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s9">
+        <button type="submit" class="btn">Sign in</button>
+      </div>
+      <div class="col s3 right-align">
+        <a routerLink="../registration"><b>Registration</b></a>
+      </div>
+    </div>
+  </form>
+</div>

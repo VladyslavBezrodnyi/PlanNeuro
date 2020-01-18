@@ -1,0 +1,62 @@
+<div class="row">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="Name"
+               placeholder="Name"
+               id="name"
+               type="text"
+        >
+        <label for="name">Name</label>
+        <div class="red-text"
+             *ngIf="registerForm.controls.Name.invalid && registerForm.controls.Name.touched">
+          Invalid
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="email" formControlName="Email">
+        <label for="email">Email</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="Password" id="password" type="password" placeholder="Password">
+        <label for="password">Password</label>
+        <div class="red-text"
+             *ngIf="registerForm.controls.Password.errors && (registerForm.controls.Password.dirty || registerForm.controls.Password.touched)">
+          <div *ngIf="registerForm.controls.Password.errors.required">
+            *Password is a required
+          </div>
+          <div *ngIf="registerForm.controls.Password.errors.minlength">
+            *Password must be a minimum of 6 characters
+          </div>
+          <div *ngIf="registerForm.controls.Password.errors.pattern">
+            *Password must have uppercase and lowercase Latin letters, digit and character
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="ConfirmPassword" id="ConfirmPassword" type="password" placeholder="ConfirmPassword">
+        <label for="ConfirmPassword">Password</label>
+        <div class="red-text"
+          *ngIf="registerForm.controls.ConfirmPassword.errors && (registerForm.controls.ConfirmPassword.dirty || registerForm.controls.ConfirmPassword.touched)">
+          <div *ngIf="registerForm.controls.ConfirmPassword.errors.required">
+            *ConfirmPassword
+          </div>
+          <div *ngIf="registerForm.controls.ConfirmPassword.errors?.mustMatch">
+            Passwords doesn't mutch
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <input type="submit"  class="btn" value="Registration"/>
+    </div>
+  </form>
+
+</div>
