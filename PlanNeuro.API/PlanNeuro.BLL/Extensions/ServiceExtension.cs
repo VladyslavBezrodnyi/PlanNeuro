@@ -10,6 +10,8 @@ using PlanNeuro.BLL.Interfaces;
 using PlanNeuro.BLL.Services;
 using PlanNeuro.DAL.Context;
 using PlanNeuro.DAL.Entities;
+using PlanNeuro.DAL.Interfaces;
+using PlanNeuro.DAL.Repositories;
 using System;
 
 namespace PlanNeuro.BLL.Extensions
@@ -45,14 +47,15 @@ namespace PlanNeuro.BLL.Extensions
         public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
         {
             return services
-                .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"), x => x.MigrationsAssembly("PlanNeuro.DAL")), ServiceLifetime.Scoped)
+                .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("MSSQLServerStringConnection"), x => x.MigrationsAssembly("PlanNeuro.DAL")), ServiceLifetime.Scoped)
                 .AddScoped<IAccountService, AccountService>()
                 .AddScoped<IBoardService,BoardService>()
                 .AddScoped<ICardsListService, CardsListService>()
                 .AddScoped<ICardService, CardService>()
                 .AddScoped<IPlanningService, PlanningService>()
                 .AddScoped<IRatingService, RatingService>()
-                .AddScoped<IConversationService, ConversationService>();
+                .AddScoped<IConversationService, ConversationService>()
+                .AddScoped<IUnitOfWork, EFUnitOfWork>();
         }
 
         private static AuthenticationBuilder AddTokenAuthentication(this IServiceCollection services, IConfiguration configuration)

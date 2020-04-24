@@ -31,6 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\PlanNeuro.Domain\PlanNeuro.Domain.csproj" />
   </ItemGroup>
 </Project>

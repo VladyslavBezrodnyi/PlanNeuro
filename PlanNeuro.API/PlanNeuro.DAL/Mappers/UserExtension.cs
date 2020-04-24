@@ -1,7 +1,7 @@
 ﻿using PlanNeuro.DAL.Entities;
 using PlanNeuro.Domain.DTOs;
 
-namespace PlanNeuro.Domain.Mappers
+namespace PlanNeuro.DAL.Mappers
 {
     public static class UserExtension
     {

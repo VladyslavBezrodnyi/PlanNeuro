@@ -8,7 +8,7 @@ using PlanNeuro.DAL.Entities;
 using PlanNeuro.Domain.DTOs;
 using PlanNeuro.Domain.ExceptionBuilders;
 using PlanNeuro.Domain.Exceptions;
-using PlanNeuro.Domain.Mappers;
+using PlanNeuro.DAL.Mappers;
 using PlanNeuro.Domain.ModelValidators;
 using PlanNeuro.Domain.Responses;
 using System;

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PlanNeuro.Domain.Mappers
+namespace PlanNeuro.DAL.Mappers
 {
     public static class CardsListExtension
     {
