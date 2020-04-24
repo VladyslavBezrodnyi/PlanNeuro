@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanNeuro.API", "PlanNeuro.API\PlanNeuro.API.csproj", "{8A3C175C-0A73-4422-83E0-C0A9FBC53385}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanNeuro.DAL", "PlanNeuro.DAL\PlanNeuro.DAL.csproj", "{67D5FBF3-BAD1-40EB-A963-23514BB6BE8D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanNeuro.BLL", "PlanNeuro.BLL\PlanNeuro.BLL.csproj", "{AFB4D39A-AE43-4F1A-B126-CFADF48232D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanNeuro.Domain", "PlanNeuro.Domain\PlanNeuro.Domain.csproj", "{F6119D0E-171A-47CD-B3AC-76CECB8DE718}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A3C175C-0A73-4422-83E0-C0A9FBC53385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A3C175C-0A73-4422-83E0-C0A9FBC53385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A3C175C-0A73-4422-83E0-C0A9FBC53385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A3C175C-0A73-4422-83E0-C0A9FBC53385}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67D5FBF3-BAD1-40EB-A963-23514BB6BE8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67D5FBF3-BAD1-40EB-A963-23514BB6BE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67D5FBF3-BAD1-40EB-A963-23514BB6BE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67D5FBF3-BAD1-40EB-A963-23514BB6BE8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFB4D39A-AE43-4F1A-B126-CFADF48232D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFB4D39A-AE43-4F1A-B126-CFADF48232D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFB4D39A-AE43-4F1A-B126-CFADF48232D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFB4D39A-AE43-4F1A-B126-CFADF48232D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6119D0E-171A-47CD-B3AC-76CECB8DE718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6119D0E-171A-47CD-B3AC-76CECB8DE718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6119D0E-171A-47CD-B3AC-76CECB8DE718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6119D0E-171A-47CD-B3AC-76CECB8DE718}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3418208-9EB6-4E55-8E72-816C4666D6B3}
+	EndGlobalSection
+EndGlobal
